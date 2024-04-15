@@ -11,6 +11,7 @@ namespace BillingSystemServices.Controllers
 {
     public class InstallmentController : ApiController
     {
+        [ExceptionHandlingFilter]
         [RequestResponseLoggingFilter]
         [Route("api/CreateInstallmentSchedule")]
         [HttpPost]

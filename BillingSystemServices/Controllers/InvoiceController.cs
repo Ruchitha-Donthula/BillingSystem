@@ -11,6 +11,7 @@ namespace BillingSystemServices.Controllers
 {
     public class InvoiceController : ApiController
     {
+        [ExceptionHandlingFilter]
         [RequestResponseLoggingFilter]
         [Route("api/CreateInvoice")]
         [HttpPost]

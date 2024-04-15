@@ -11,6 +11,7 @@ namespace BillingSystemServices.Controllers
 {
     public class BillAccountController : ApiController
     {
+        [ExceptionHandlingFilter]
         [RequestResponseLoggingFilter]
         [HttpPost]
         [Route("api/CreateBillAccount")]
@@ -25,6 +26,7 @@ namespace BillingSystemServices.Controllers
             return Ok("BillAccount added successfully");
         }
 
+        [ExceptionHandlingFilter]
         [RequestResponseLoggingFilter]
         [Route("api/AssociateBillAccountWithPolicy")]
         [HttpPost]
@@ -46,6 +48,7 @@ namespace BillingSystemServices.Controllers
             public string Payplan { get; set; }
         }
 
+        [ExceptionHandlingFilter]
         [RequestResponseLoggingFilter]
         [Route("api/GetBillAccountById")]
         [HttpGet]
@@ -59,6 +62,7 @@ namespace BillingSystemServices.Controllers
             return Json(billAccount);
         }
 
+        [ExceptionHandlingFilter]
         [RequestResponseLoggingFilter]
         [Route("api/GetBillAccountByNumber")]
         [HttpGet]
@@ -72,6 +76,7 @@ namespace BillingSystemServices.Controllers
             return Json(billAccount);
         }
 
+        [ExceptionHandlingFilter]
         [RequestResponseLoggingFilter]
         [Route("api/UpdateBillAccount")]
         [HttpPost]
@@ -85,6 +90,7 @@ namespace BillingSystemServices.Controllers
             return Ok("Bill account updated successfully");
         }
 
+        [ExceptionHandlingFilter]
         [RequestResponseLoggingFilter]
         [Route("api/SuspendBillAccount")]
         [HttpPost]
@@ -98,6 +104,7 @@ namespace BillingSystemServices.Controllers
             return Ok("Bill account suspended successfully");
         }
 
+        [ExceptionHandlingFilter]
         [RequestResponseLoggingFilter]
         [Route("api/ReleaseBillAccount")]
         [HttpPost]

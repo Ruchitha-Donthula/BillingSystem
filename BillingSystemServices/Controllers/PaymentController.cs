@@ -11,6 +11,7 @@ namespace BillingSystemServices.Controllers
 {
     public class PaymentController : ApiController
     {
+        [ExceptionHandlingFilter]
         [RequestResponseLoggingFilter]
         [Route("api/ApplyPayment")]
         [HttpPost]
